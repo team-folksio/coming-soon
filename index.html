@@ -1,244 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Folksio – Coming Soon</title>
 
-        <!-- Tailwind CSS CDN -->
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <!-- Google Font: Poppins -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-
-        <style>
-            body {
-                font-family: "Poppins", sans-serif;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folksio - Smart Automation & Custom Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
             }
-        </style>
-    </head>
-    <body class="bg-white text-gray-800">
-        <!-- Hero Section -->
-        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <!-- Grid Layout -->
-            <div class="grid md:grid-cols-2 gap-8 md:items-center">
-                <!-- Left Column: Text & Subscription -->
-                <div>
-                    <h1 class="text-4xl font-bold sm:text-5xl lg:text-6xl"><span class="text-black">folks</span><span class="text-blue-500">io</span> is Coming Soon</h1>
-                    <p class="mt-4 text-lg">We’re working hard to bring you an amazing experience. Stay tuned for updates!</p>
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 overflow-x-hidden">
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-indigo-600 opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-600 opacity-5 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200/20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2 group">
+                        <img src="/folksio.svg" alt="Folksio Logo"
+                            class="absolute inset-0 relative w-2/3 h-auto">
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services"
+                        class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300">Services</a>
+                    <a href="#experience"
+                        class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300">Experience</a>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300">About</a>
+                    <a href="#contact"
+                        class="px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:shadow-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                        Contact Us
+                    </a>
+                </nav>
+                <button class="md:hidden text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Hero Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-[0.03]">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#smallGrid)" />
+                </svg>
+            </div>
+
+            <!-- Gradient Blobs -->
+            <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-indigo-600/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-600/20 rounded-full blur-3xl"></div>
+            <div
+                class="absolute top-1/4 left-1/4 w-1/3 h-1/3 bg-purple-600/10 rounded-full blur-3xl animate-pulse-slow">
+            </div>
+
+            <!-- Abstract Shapes -->
+            <div class="absolute top-20 left-10 opacity-20">
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" stroke="#4f46e5" stroke-width="2" />
+                    <circle cx="100" cy="100" r="40" stroke="#3b82f6" stroke-width="2" />
+                    <line x1="20" y1="100" x2="180" y2="100" stroke="#4f46e5" stroke-width="2" />
+                    <line x1="100" y1="20" x2="100" y2="180" stroke="#3b82f6" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="absolute bottom-20 right-10 opacity-20">
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="40" y="40" width="120" height="120" stroke="#4f46e5" stroke-width="2" />
+                    <rect x="70" y="70" width="60" height="60" stroke="#3b82f6" stroke-width="2" />
+                    <line x1="10" y1="10" x2="190" y2="190" stroke="#4f46e5" stroke-width="2" />
+                    <line x1="190" y1="10" x2="10" y2="190" stroke="#3b82f6" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-6">
+                        <span class="h-2 w-2 rounded-full bg-indigo-600 mr-2"></span>
+                        <span class="text-sm font-medium text-indigo-700">Next-Gen Automation Solutions</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+                        <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">Smart
+                            Automation</span>
+                        <br />for Modern Businesses
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0">
+                        Folksio delivers custom applications and automation solutions that transform operations, reduce
+                        costs, and drive innovation for forward-thinking companies.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact"
+                            class="px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                            Get Started
+                        </a>
+                        <a href="#services"
+                            class="px-8 py-4 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 hover:border-indigo-300 transition-all duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Hero Illustration -->
+                    <div class="relative z-10 animate-float">
+                        <svg class="w-full h-auto" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.8" />
+                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.9" />
+                                </linearGradient>
+                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="10" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+
+                            <!-- Base Shape -->
+                            <rect width="600" height="400" rx="20" fill="url(#heroGradient)" />
+
+                            <!-- Abstract Tech Elements -->
+                            <circle cx="150" cy="150" r="80" fill="white" fill-opacity="0.1" />
+                            <circle cx="450" cy="250" r="120" fill="white" fill-opacity="0.1" />
+
+                            <!-- Connection Lines -->
+                            <path d="M100,100 L200,200 L300,150 L400,250 L500,200" stroke="white" stroke-width="4"
+                                stroke-opacity="0.3" fill="none" filter="url(#glow)" />
+
+                            <!-- Nodes -->
+                            <circle cx="100" cy="100" r="15" fill="white" filter="url(#glow)" />
+                            <circle cx="200" cy="200" r="15" fill="white" filter="url(#glow)" />
+                            <circle cx="300" cy="150" r="15" fill="white" filter="url(#glow)" />
+                            <circle cx="400" cy="250" r="15" fill="white" filter="url(#glow)" />
+                            <circle cx="500" cy="200" r="15" fill="white" filter="url(#glow)" />
+
+                            <!-- Digital Elements -->
+                            <rect x="150" y="300" width="150" height="80" rx="10" fill="white" fill-opacity="0.2" />
+                            <rect x="350" y="100" width="150" height="80" rx="10" fill="white" fill-opacity="0.2" />
+
+                            <!-- Binary code suggestion -->
+                            <text x="170" y="330" font-family="monospace" font-size="12" fill="white">01001010</text>
+                            <text x="170" y="350" font-family="monospace" font-size="12" fill="white">10110101</text>
+                            <text x="170" y="370" font-family="monospace" font-size="12" fill="white">01101001</text>
+
+                            <text x="370" y="130" font-family="monospace" font-size="12" fill="white">11001010</text>
+                            <text x="370" y="150" font-family="monospace" font-size="12" fill="white">00110101</text>
+                            <text x="370" y="170" font-family="monospace" font-size="12" fill="white">10101001</text>
+                        </svg>
+                    </div>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-600/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/10 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+
+            <!-- Trusted By Section -->
+            <!-- <div class="mt-20 text-center">
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-6">Trusted by innovative
+                    companies</p> -->
+            <!-- <div class="flex flex-wrap justify-center gap-x-12 gap-y-8"> -->
+            <!-- Company logos would go here - using placeholder text for now -->
+            <!-- <div class="text-xl font-bold text-gray-300">COMPANY 1</div>
+                    <div class="text-xl font-bold text-gray-300">COMPANY 2</div>
+                    <div class="text-xl font-bold text-gray-300">COMPANY 3</div>
+                    <div class="text-xl font-bold text-gray-300">COMPANY 4</div> -->
+            <!-- </div> -->
+            <!-- </div>
+        </div> -->
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="services" class="relative py-24 md:py-32 bg-white overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-[0.02]">
+                <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="wavyPattern" x="0" y="0" width="100" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M0,10 C30,15 70,5 100,10 L100,0 L0,0 Z" fill="#4f46e5" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#wavyPattern)" />
+                </svg>
+            </div>
+            <div class="absolute bottom-0 right-0 w-1/3 h-1/3 bg-indigo-600/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-4">
+                    <span class="text-sm font-medium text-indigo-700">Our Services</span>
+                </div>
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+                    What We Do</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We deliver cutting-edge solutions that transform how businesses operate, focusing on automation,
+                    efficiency, and innovation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Homecare Automation Card -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-blue-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white rounded-3xl shadow-xl p-8 border border-gray-100 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <div class="absolute -top-6 left-8">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-indigo-600/20 rounded-full blur-md transform scale-125">
+                                </div>
+                                <div
+                                    class="relative w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-10">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Homecare Automation</h3>
+                            <p class="text-gray-600 mb-6">
+                                Deploy smart solutions to simplify homecare, reduce operational overhead, and improve
+                                patient outcomes with our specialized automation platform.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center font-medium text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300">
+                                <span>Explore Care Platform</span>
+                                <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right Column: SVG Illustration -->
-                <div class="flex justify-center">
-                    <svg
-                        class="w-full max-w-md md:max-w-lg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="876.27165"
-                        height="661.47277"
-                        viewBox="0 0 876.27165 661.47277"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        role="img"
-                        artist="Katerina Limpitsouni"
-                        source="https://undraw.co/"
-                    >
-                        <path
-                            d="M685.83423,138.6545c7.51624,15.99516-8.41069,20.5258-26.65516,29.099s-31.8977,17.94247-39.41393,1.94732-13.61474-47.74263,12.19523-59.87092C658.65953,97.2838,678.318,122.65934,685.83423,138.6545Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <circle cx="467.74627" cy="39.08912" r="24.56103" fill="#ffb8b8" />
-                        <path
-                            d="M770.29037,254.47277c-.85009-1.11-1.70019-2.2-2.56006-3.26q-1.66479-2.07-3.35009-4.01c-12.73-14.69-26.27-23.94-41.17969-24.93h-.02l-.22021-.02-29.71,28.96-10.10009,9.84.22021.54,5.44971,13.57h95.49023A234.83392,234.83392,0,0,0,770.29037,254.47277Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <path
-                            d="M621.90207,155.43779l0,0,8.792-4.13144-1.22476-12.68333,5.87908,10.49623,4.20223-1.97466-.7144-7.39862,3.42957,6.12274,31.22444-14.67258,0,0a26,26,0,0,0-34.589-12.47385l-4.52533,2.12648A26,26,0,0,0,621.90207,155.43779Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <path
-                            d="M825.39023,601.26062H312.55173a16.51867,16.51867,0,0,1-16.5-16.5V276.60681a12.10184,12.10184,0,0,1,12.08789-12.08838H829.59311a12.31112,12.31112,0,0,1,12.29712,12.29736V584.76062A16.51868,16.51868,0,0,1,825.39023,601.26062Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#f2f2f2"
-                        />
-                        <path d="M328.55173,584.76062h480.8385a16,16,0,0,0,16-16V307.21277a16,16,0,0,0-16-16H328.55173a16,16,0,0,0-16,16V568.76062A16,16,0,0,0,328.55173,584.76062Z" transform="translate(-180.86417 -106.46046)" fill="#fff" />
-                        <path d="M841.66049,275.663H295.82016v-8.40039a16.57376,16.57376,0,0,1,16.56006-16.5498H825.10043a16.57368,16.57368,0,0,1,16.56006,16.5498Z" transform="translate(-180.86417 -106.46046)" fill="#6c63ff" />
-                        <circle cx="145.05135" cy="156.7523" r="4.28342" fill="#fff" />
-                        <circle cx="161.31015" cy="156.7523" r="4.28342" fill="#fff" />
-                        <circle cx="177.56896" cy="156.7523" r="4.28342" fill="#fff" />
-                        <path
-                            d="M583.97441,528.03954h-43a9.51081,9.51081,0,0,1-9.5-9.5v-43a9.51081,9.51081,0,0,1,9.5-9.5h43a9.51081,9.51081,0,0,1,9.5,9.5v43A9.51081,9.51081,0,0,1,583.97441,528.03954Zm-43-60a7.50835,7.50835,0,0,0-7.5,7.5v43a7.50836,7.50836,0,0,0,7.5,7.5h43a7.50836,7.50836,0,0,0,7.5-7.5v-43a7.50835,7.50835,0,0,0-7.5-7.5Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path
-                            d="M575.47441,516.03954h-26a3.00328,3.00328,0,0,1-3-3v-32a3.00328,3.00328,0,0,1,3-3h18.83935a3.0073,3.0073,0,0,1,1.8794.66162l7.16016,5.7539a2.9844,2.9844,0,0,1,1.12109,2.33838v26.2461A3.00328,3.00328,0,0,1,575.47441,516.03954Zm-26-36a1.0013,1.0013,0,0,0-1,1v32a1.0013,1.0013,0,0,0,1,1h26a1.0013,1.0013,0,0,0,1-1v-26.2461a.99457.99457,0,0,0-.37354-.77929l-7.16113-5.7544a1.00206,1.00206,0,0,0-.626-.22021Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path d="M570.47441,492.03954h-16a1,1,0,0,1,0-2h16a1,1,0,0,1,0,2Z" transform="translate(-180.86417 -106.46046)" fill="#ccc" />
-                        <path d="M570.47441,498.03954h-16a1,1,0,0,1,0-2h16a1,1,0,0,1,0,2Z" transform="translate(-180.86417 -106.46046)" fill="#ccc" />
-                        <path d="M570.47441,504.03954h-16a1,1,0,0,1,0-2h16a1,1,0,0,1,0,2Z" transform="translate(-180.86417 -106.46046)" fill="#ccc" />
-                        <path
-                            d="M685.97441,528.03954h-43a9.51081,9.51081,0,0,1-9.5-9.5v-43a9.51081,9.51081,0,0,1,9.5-9.5h43a9.51081,9.51081,0,0,1,9.5,9.5v43A9.51081,9.51081,0,0,1,685.97441,528.03954Zm-43-60a7.50835,7.50835,0,0,0-7.5,7.5v43a7.50836,7.50836,0,0,0,7.5,7.5h43a7.50836,7.50836,0,0,0,7.5-7.5v-43a7.50835,7.50835,0,0,0-7.5-7.5Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path
-                            d="M678.47441,508.03954h-28a3.00328,3.00328,0,0,1-3-3v-16a3.00328,3.00328,0,0,1,3-3h28a3.00328,3.00328,0,0,1,3,3v16A3.00328,3.00328,0,0,1,678.47441,508.03954Zm-28-20a1.001,1.001,0,0,0-1,1v16a1.001,1.001,0,0,0,1,1h28a1.001,1.001,0,0,0,1-1v-16a1.001,1.001,0,0,0-1-1Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path
-                            d="M664.47441,499.67772a3.00345,3.00345,0,0,1-1.58984-.45264l-14.94043-9.3374a1.00027,1.00027,0,0,1,1.06054-1.69629l14.94043,9.3374a1.00555,1.00555,0,0,0,1.05957,0l14.93946-9.3374a1.00027,1.00027,0,0,1,1.06054,1.69629l-14.93945,9.3374A3.00432,3.00432,0,0,1,664.47441,499.67772Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path
-                            d="M481.97441,528.03954h-43a9.51081,9.51081,0,0,1-9.5-9.5v-43a9.51081,9.51081,0,0,1,9.5-9.5h43a9.51081,9.51081,0,0,1,9.5,9.5v43A9.51081,9.51081,0,0,1,481.97441,528.03954Zm-43-60a7.50835,7.50835,0,0,0-7.5,7.5v43a7.50836,7.50836,0,0,0,7.5,7.5h43a7.50836,7.50836,0,0,0,7.5-7.5v-43a7.50835,7.50835,0,0,0-7.5-7.5Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path
-                            d="M474.47441,508.03954h-28a3.00328,3.00328,0,0,1-3-3v-16a3.00328,3.00328,0,0,1,3-3h28a3.00328,3.00328,0,0,1,3,3v16A3.00328,3.00328,0,0,1,474.47441,508.03954Zm-28-20a1.001,1.001,0,0,0-1,1v16a1.001,1.001,0,0,0,1,1h28a1.001,1.001,0,0,0,1-1v-16a1.001,1.001,0,0,0-1-1Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <path
-                            d="M470.03642,508.03954h-20.124a1.99958,1.99958,0,0,1-1.73194-3l6.06153-10.5a2.00022,2.00022,0,0,1,3.46435,0l3.915,6.78125,2.26807-3.92871a2.00022,2.00022,0,0,1,3.46435,0l4.415,7.64746a2,2,0,0,1-1.73242,3Zm0-2h0l-4.415-7.64746-3.13379,5.42871a.99985.99985,0,0,1-.86621.5h0a.99985.99985,0,0,1-.86621-.5l-4.78076-8.28125-6.062,10.5Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <circle cx="290.61013" cy="385.57888" r="2" fill="#ccc" />
-                        <polygon points="768.825 648.15 756.565 648.149 750.733 600.861 768.827 600.862 768.825 648.15" fill="#ffb8b8" />
-                        <path d="M952.81564,766.49434l-39.53051-.00146v-.5a15.38605,15.38605,0,0,1,15.38647-15.38623h.001l24.1438.001Z" transform="translate(-180.86417 -106.46046)" fill="#2f2e41" />
-                        <polygon points="818.825 648.15 806.565 648.149 800.733 600.861 818.827 600.862 818.825 648.15" fill="#ffb8b8" />
-                        <path d="M1002.81564,766.49434l-39.53051-.00146v-.5a15.38605,15.38605,0,0,1,15.38647-15.38623h.001l24.1438.001Z" transform="translate(-180.86417 -106.46046)" fill="#2f2e41" />
-                        <path
-                            d="M996.0139,734.11079l-11.35449-3.4541a4.49323,4.49323,0,0,1-3.16577-3.833L970.9077,626.49751a.47984.47984,0,0,0-.47851-.44726.46935.46935,0,0,0-.5105.40918l-17.731,97.19922a4.50036,4.50036,0,0,1-5.33471,3.59961L932.34154,724.269a4.51613,4.51613,0,0,1-3.58179-4.71192l10.7854-159.3125,73.13794-7.8916-10.86792,177.72656a4.50464,4.50464,0,0,1-4.48437,4.22754A4.52613,4.52613,0,0,1,996.0139,734.11079Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <circle cx="815.08028" cy="290.48693" r="24.56103" fill="#ffb8b8" />
-                        <path
-                            d="M939.43261,561.18013l15.85815-99.85107a37.85746,37.85746,0,0,1,48.00537-30.39942h0a37.74323,37.74323,0,0,1,26.60108,43.26221l-16.59107,89.17187Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#1E90FF"
-                        />
-                        <path
-                            d="M1002.725,579.04609a10.0558,10.0558,0,0,0,1.747-15.32l16.39619-31.75128-18.46486,1.97048-12.73924,29.84946a10.11027,10.11027,0,0,0,13.06089,15.25138Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ffb8b8"
-                        />
-                        <path
-                            d="M1006.23594,558.12555a4.50552,4.50552,0,0,1-2.4265-1.15083l-6.27324-5.79662a4.51468,4.51468,0,0,1-1.09178-5.05417l12.53746-29.71816-1.77859-58.71981a14.49652,14.49652,0,1,1,28.727,3.91856l3.041,36.91226a46.37346,46.37346,0,0,1-8.93769,31.39683l-19.55206,26.43232a4.505,4.505,0,0,1-3.19513,1.80387A4.45452,4.45452,0,0,1,1006.23594,558.12555Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#1E90FF"
-                        />
-                        <path
-                            d="M854.50508,383.5656a10.05575,10.05575,0,0,0,13.42647,7.58193l22.84575,27.47819,5.38477-17.77183-22.52025-23.36914a10.11027,10.11027,0,0,0-19.13674,6.08085Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ffb8b8"
-                        />
-                        <path
-                            d="M872.40107,394.9555a4.50564,4.50564,0,0,1,2.00583-1.78577l7.78377-3.51672a4.51467,4.51467,0,0,1,5.07986.96521l22.478,23.13213,54.76621,21.25658a14.49652,14.49652,0,1,1-14.80889,24.92573l-35.17667-11.59151a46.37351,46.37351,0,0,1-25.42736-20.47176l-16.71728-28.31048a4.50493,4.50493,0,0,1-.41535-3.64558A4.45446,4.45446,0,0,1,872.40107,394.9555Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#1E90FF"
-                        />
-                        <polygon points="835.002 375.652 834.002 407.652 815.58 439.663 830.962 403.99 835.002 375.652" opacity="0.1" />
-                        <path
-                            d="M993.13047,401.56313a6.42292,6.42292,0,0,1-7.03053-4.70224,9.76432,9.76432,0,0,0-6.95075-7.2736c-4.5055-1.02949-10.01213,1.09128-13.31351-2.32232a6.63748,6.63748,0,0,1-1.57539-5.84234c.60807-3.31718,2.981-5.8232,5.56326-7.8275a34.06226,34.06226,0,0,1,18.8661-7.05067,67.67657,67.67657,0,0,1,10.62084.52837,47.00933,47.00933,0,0,1,10.86368,1.98538,25.57605,25.57605,0,0,1,16.00171,18.68024,29.528,29.528,0,0,1-6.05709,24.13034,31.70221,31.70221,0,0,1-12.16059,9.25872,4.74429,4.74429,0,0,1-3.60621.18291c-2.95734-1.17583-2.47409-4.83917-1.12569-7.28253,1.443-2.61478,3.66335-5.1464,2.50287-8.32859a6.302,6.302,0,0,0-3.12714-3.3662c-2.93992-1.49928-6.22821-1.14456-9.38876-.77957Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <path
-                            d="M846.29741,415.4331h-304a16.51867,16.51867,0,0,1-16.5-16.5v-65a16.51868,16.51868,0,0,1,16.5-16.5h304a16.519,16.519,0,0,1,16.5,16.5v65A16.519,16.519,0,0,1,846.29741,415.4331Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#fff"
-                        />
-                        <path
-                            d="M846.29724,415.93324h-304a17.01917,17.01917,0,0,1-17-17v-65a17.01916,17.01916,0,0,1,17-17h304a17.01916,17.01916,0,0,1,17,17v65A17.01917,17.01917,0,0,1,846.29724,415.93324Zm-304-97a15.017,15.017,0,0,0-15,15v65a15.017,15.017,0,0,0,15,15h304a15.017,15.017,0,0,0,15-15v-65a15.017,15.017,0,0,0-15-15Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#3f3d56"
-                        />
-                        <path
-                            d="M809.29724,399.43324h-230a16.51868,16.51868,0,0,1-16.5-16.5v-34a16.51867,16.51867,0,0,1,16.5-16.5h230a16.51866,16.51866,0,0,1,16.5,16.5v34A16.51867,16.51867,0,0,1,809.29724,399.43324Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#f2f2f2"
-                        />
-                        <circle cx="447.92802" cy="254.91484" r="19.73228" fill="#ff6584" />
-                        <path
-                            d="M795.00425,397.4419l-27.85254-23.35968-27.37158-22.95636a4.00031,4.00031,0,0,0-5.15283.01l-27.28321,23.06165-6.66406,5.6333-10.04834-8.42737-30.53711-25.61084a3.99964,3.99964,0,0,0-5.15234.00989l-30.438,25.72833-30.917,26.13349a.99994.99994,0,0,0,.64746,1.76373l63.38672-.12213,20.064-.03864-.19629.166,59.80762-.11524,57.0669-.10992A.99989.99989,0,0,0,795.00425,397.4419Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#3f3d56"
-                        />
-                        <path d="M1056.13583,767.93324h-192a1,1,0,0,1,0-2h192a1,1,0,0,1,0,2Z" transform="translate(-180.86417 -106.46046)" fill="#ccc" />
-                        <path
-                            d="M784.92026,238.37274a11.22094,11.22094,0,0,0-7.25-5.1,10.30111,10.30111,0,0,0-1.65967-.21l-76.19043-68.12a9.01491,9.01491,0,0,0-5.62988-2.69,7.66989,7.66989,0,0,0-1.27-.04,9.05493,9.05493,0,0,0-5.96,15.48l29.16992,25.43,47.8999,41.75a11.91555,11.91555,0,0,0,.3501,2.33,11.26607,11.26607,0,0,0,9.66992,8.37,11.09212,11.09212,0,0,0,6.05029-1,11.40659,11.40659,0,0,0,3.87988-2.97c.10987-.13.21-.25.31006-.39a11.29281,11.29281,0,0,0,.62989-12.84Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ffb8b8"
-                        />
-                        <path
-                            d="M654.60043,304.02276l-.71-28.86-.6001-23.95-.41015-16.76-.81006-32.67a9.04565,9.04565,0,0,0-15.71-5.25,6.92326,6.92326,0,0,0-.75.96,8.93574,8.93574,0,0,0-1.56006,6.05l1.78027,47.67.89014,23.95,1.13965,30.55a12.0475,12.0475,0,0,0-.88965,1.41,11.248,11.248,0,0,0-.71,8.84,11.31144,11.31144,0,0,0,15.55957,6.63,11.30069,11.30069,0,0,0,2.78027-18.57Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ffb8b8"
-                        />
-                        <path
-                            d="M723.20053,222.27276l-7.07031-19.15-11.43994-31.02a16.0055,16.0055,0,0,0-9.9502-9.68c-.17969-.06-.36963-.12-.5498-.17005a15.984,15.984,0,0,0-13.23975,1.82l-38.53027,24.44a16.09316,16.09316,0,0,0-5.27,21.75,276.323,276.323,0,0,0,15.73,24.19c4.49023,6.11,12.85009,6.76,14.30029,16.76h28.40967l28.76025-25.82Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#ccc"
-                        />
-                        <circle cx="101.16464" cy="326.68231" r="23.17166" fill="#a0616a" />
-                        <path
-                            d="M338.91551,417.19256q.3425.27261.66395.57794a10.38021,10.38021,0,0,1-.41708,15.48365,9.72179,9.72179,0,0,1-.81382.61338l1.56823,52.94493a8.06132,8.06132,0,0,1-5.545,7.867l-.09553.02052-42.98869,4.578a8.89852,8.89852,0,1,1-1.72218-17.71279l30.64427-2.69888,5.29962-45.851a9.87574,9.87574,0,0,1-.97155-.99,10.38,10.38,0,0,1,14.3778-14.83273Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#a0616a"
-                        />
-                        <polygon points="139.328 649.174 150.895 649.174 156.397 604.561 139.326 604.561 139.328 649.174" fill="#a0616a" />
-                        <path d="M317.24235,751.8583l22.778-.00093h.00092a14.5157,14.5157,0,0,1,14.51609,14.51587v.47171l-37.29436.00139Z" transform="translate(-180.86417 -106.46046)" fill="#2f2e41" />
-                        <polygon points="24.366 633.182 34.304 639.099 61.857 603.582 47.189 594.849 24.366 633.182" fill="#a0616a" />
-                        <path d="M204.6271,734.88875l19.57164,11.65289.00079.00047a14.5157,14.5157,0,0,1,5.04582,19.89892l-.24134.40531L196.95952,747.767Z" transform="translate(-180.86417 -106.46046)" fill="#2f2e41" />
-                        <path
-                            d="M334.4881,739.87708H321.53641a4.23772,4.23772,0,0,1-4.22149-3.79676L304.25773,613.34293a1.41541,1.41541,0,0,0-2.69716-.433l-23.5554,52.15872-41.70358,68.00266a4.26564,4.26564,0,0,1-5.32891,1.66575l-16.66024-7.33a4.24672,4.24672,0,0,1-1.93478-6.06413l38.33707-64.19208,11.75766-54.0852c-3.69795-23.455,12.155-58.326,12.31575-58.67614l.07855-.17044,43.66751-17.06765.219.2681c17.22117,56.51377,27.715,117.3322,19.96672,208.5678A4.27417,4.27417,0,0,1,334.4881,739.87708Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <path
-                            d="M273.10743,549.934l-.20339-.42749c-.09719-.20454-9.807-20.68365-17.292-42.57146a32.28512,32.28512,0,0,1,2.23858-25.87344,32.6374,32.6374,0,0,1,20.81263-16.00426h0A32.677,32.677,0,0,1,316.591,484.62709c5.93722,14.84708,4.045,30.69452,2.26429,43.15723l-.03547.24967-.22711.10872Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#3f3d56"
-                        />
-                        <path d="M310.12378,420.05358H273.32992V404.01523c8.07584-3.20838,15.97847-5.93693,20.75551,0a16.03844,16.03844,0,0,1,16.03835,16.03833Z" transform="translate(-180.86417 -106.46046)" fill="#2f2e41" />
-                        <path
-                            d="M271.29289,401.18493c-21.99607,0-28.15279,27.57121-28.15279,43.12552,0,8.67446,3.923,11.777,10.08753,12.8268l2.17708-11.611,5.09905,12.11064c1.73162.00864,3.55077-.02488,5.43671-.05989l1.72886-3.55986,3.85527,3.496c15.44087.023,27.92061,2.27382,27.92061-13.20269C299.44521,428.75614,294.04582,401.18493,271.29289,401.18493Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#2f2e41"
-                        />
-                        <path d="M373.86417,767.93324h-192a1,1,0,1,1,0-2h192a1,1,0,0,1,0,2Z" transform="translate(-180.86417 -106.46046)" fill="#ccc" />
-                        <path
-                            d="M377.47441,438.93324h-43a9.51081,9.51081,0,0,1-9.5-9.5v-43a9.51081,9.51081,0,0,1,9.5-9.5h43a9.51081,9.51081,0,0,1,9.5,9.5v43A9.51081,9.51081,0,0,1,377.47441,438.93324Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#fff"
-                        />
-                        <path
-                            d="M377.47441,438.93324h-43a9.51081,9.51081,0,0,1-9.5-9.5v-43a9.51081,9.51081,0,0,1,9.5-9.5h43a9.51081,9.51081,0,0,1,9.5,9.5v43A9.51081,9.51081,0,0,1,377.47441,438.93324Zm-43-60a7.50836,7.50836,0,0,0-7.5,7.5v43a7.50836,7.50836,0,0,0,7.5,7.5h43a7.50836,7.50836,0,0,0,7.5-7.5v-43a7.50836,7.50836,0,0,0-7.5-7.5Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#3f3d56"
-                        />
-                        <path
-                            d="M369.97441,421.43324h-28a3.00328,3.00328,0,0,1-3-3v-21a3.00328,3.00328,0,0,1,3-3h7.88232a2.98117,2.98117,0,0,1,2.55518,1.42724l2.19824,3.57276h15.36426a3.00328,3.00328,0,0,1,3,3v16A3.00328,3.00328,0,0,1,369.97441,421.43324Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#1E90FF"
-                        />
-                        <path
-                            d="M369.06364,432.04239q.20986.38415.38766.79029a10.38021,10.38021,0,0,1-6.39269,14.10854,9.72022,9.72022,0,0,1-.98807.24953l-19.09943,49.40482a8.06134,8.06134,0,0,1-8.16324,5.09887l-.096-.01816-41.39664-12.46211a8.89853,8.89853,0,1,1,5.28606-16.99313l29.29033,9.40382,22.6764-40.20175a9.87622,9.87622,0,0,1-.51127-1.28942,10.38005,10.38005,0,0,1,19.0069-8.0913Z"
-                            transform="translate(-180.86417 -106.46046)"
-                            fill="#a0616a"
-                        />
-                    </svg>
+                <!-- Construction Health & Safety Card -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-blue-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white rounded-3xl shadow-xl p-8 border border-gray-100 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <div class="absolute -top-6 left-8">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-indigo-600/20 rounded-full blur-md transform scale-125">
+                                </div>
+                                <div
+                                    class="relative w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-10">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Construction Health & Safety</h3>
+                            <p class="text-gray-600 mb-6">
+                                Enhance safety compliance, monitor site conditions, and automate risk mitigation for
+                                construction teams with our integrated safety platform.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center font-medium text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300">
+                                <span>Explore Safety Platform</span>
+                                <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Application Development Card -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-blue-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white rounded-3xl shadow-xl p-8 border border-gray-100 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <div class="absolute -top-6 left-8">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-indigo-600/20 rounded-full blur-md transform scale-125">
+                                </div>
+                                <div
+                                    class="relative w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-10">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Application Development</h3>
+                            <p class="text-gray-600 mb-6">
+                                Get tailor-made software that fits your unique business needs — designed, built, and
+                                maintained by our expert development team.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center font-medium text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300">
+                                <span>Learn More</span>
+                                <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+    </section>
+
+    <!-- Our Experience Section -->
+    <section id="experience" class="relative py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-indigo-600/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-600/5 rounded-full blur-3xl"></div>
+
+            <!-- Circuit Board Pattern -->
+            <div class="absolute inset-0 opacity-[0.03]">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="circuitPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                            <path d="M0,50 L100,50 M50,0 L50,100 M25,25 L75,75 M75,25 L25,75" stroke="currentColor"
+                                stroke-width="1" fill="none" />
+                            <circle cx="50" cy="50" r="5" fill="currentColor" />
+                            <circle cx="25" cy="25" r="3" fill="currentColor" />
+                            <circle cx="75" cy="75" r="3" fill="currentColor" />
+                            <circle cx="75" cy="25" r="3" fill="currentColor" />
+                            <circle cx="25" cy="75" r="3" fill="currentColor" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-4">
+                    <span class="text-sm font-medium text-indigo-700">Our Track Record</span>
+                </div>
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+                    Our Experience</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Folksio brings deep expertise in automation for regulated industries, with a proven track record of
+                    delivering high-quality solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/50 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div
+                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            2</div>
+                        <div class="mt-3 text-gray-600 font-medium">Projects Delivered</div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/50 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                        <div
+                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            100%</div>
+                        <div class="mt-3 text-gray-600 font-medium">Client Satisfaction</div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/50 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <div
+                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            2</div>
+                        <div class="mt-3 text-gray-600 font-medium">Industries Served</div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/50 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                        <div
+                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div
+                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            5+</div>
+                        <div class="mt-3 text-gray-600 font-medium">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="relative py-24 md:py-32 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <!-- Abstract Mesh Pattern -->
+            <div class="absolute inset-0 opacity-[0.02]">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="meshPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M0,20 Q10,0 20,20 T40,20" stroke="currentColor" stroke-width="1" fill="none" />
+                            <path d="M0,20 Q10,40 20,20 T40,20" stroke="currentColor" stroke-width="1" fill="none" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#meshPattern)" />
+                </svg>
+            </div>
+
+            <!-- Gradient Blobs -->
+            <div class="absolute top-1/4 right-0 w-1/3 h-1/3 bg-indigo-600/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 left-0 w-1/3 h-1/3 bg-blue-600/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-4">
+                    <span class="text-sm font-medium text-indigo-700">Who We Are</span>
+                </div>
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+                    About Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We are a passionate team committed to building reliable, scalable, and user-friendly solutions for
+                    high-demand sectors.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 h-full">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Reliable</h3>
+                        <p class="text-gray-600">We build solutions that work consistently and securely, ensuring your
+                            business operations run smoothly without interruption.</p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 h-full">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Professional</h3>
+                        <p class="text-gray-600">We deliver on time and maintain clear communication throughout the
+                            entire development process, ensuring transparency and trust.</p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 h-full">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Innovative</h3>
+                        <p class="text-gray-600">We leverage the latest technologies to solve complex problems and
+                            create forward-thinking solutions that keep your business ahead of the curve.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center">
+                <a href="#contact"
+                    class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                    Work With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-24 md:py-32 bg-gradient-to-br from-indigo-50 to-blue-50 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <!-- Gradient Blobs -->
+            <div class="absolute top-0 left-0 w-1/2 h-1/2 bg-indigo-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-blue-600/10 rounded-full blur-3xl"></div>
+
+            <!-- Abstract Lines -->
+            <div class="absolute inset-0 opacity-[0.03]">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="contactPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                            <path d="M0,0 L100,100 M100,0 L0,100 M50,0 L50,100 M0,50 L100,50" stroke="currentColor"
+                                stroke-width="1" fill="none" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#contactPattern)" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-4">
+                    <span class="text-sm font-medium text-indigo-700">Get In Touch</span>
+                </div>
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+                    Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to transform your business with smart automation? Reach out today for a free consultation.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-blue-600/20 rounded-3xl blur-xl">
+                    </div>
+                    <div class="relative bg-white/20 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden">
+                        <div class="p-8 md:p-12">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                <div>
+                                    <h3
+                                        class="text-2xl font-bold bg-gradient-to-r from-indigo-800 to-blue-800 bg-clip-text text-transparent mb-6">
+                                        Let's Build the Future Together</h3>
+                                    <p class="text-gray-700 mb-8">
+                                        Schedule a consultation to explore how we can help automate your processes and
+                                        drive efficiency.
+                                    </p>
+                                    <div class="space-y-6">
+                                        <div class="flex items-start">
+                                            <div class="flex-shrink-0">
+                                                <div
+                                                    class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                                                    <svg class="w-5 h-5 text-indigo-600"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4">
+                                                <p class="text-sm font-medium text-gray-900">Email</p>
+                                                <a href="mailto:admin@folksio.com"
+                                                    class="text-indigo-600 hover:text-indigo-700">admin@folksio.com</a>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="flex-shrink-0">
+                                                <div
+                                                    class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                                                    <svg class="w-5 h-5 text-indigo-600"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4">
+                                                <p class="text-sm font-medium text-gray-900">Location</p>
+                                                <p class="text-gray-600">Kochi, Kerala, India</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white/80 backdrop-blur-md rounded-2xl p-8 shadow-lg flex flex-col items-center justify-center">
+                                    <div class="text-center mb-8">
+                                        <svg class="w-16 h-16 text-indigo-600 mx-auto mb-4"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ready to get started?</h3>
+                                        <p class="text-gray-600 mb-6">Send us an email and we'll get back to you within
+                                            24 hours.</p>
+                                    </div>
+                                    <a href="mailto:admin@folksio.com"
+                                        class="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium text-center shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center">
+                                        <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                        Email Us Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 pt-16 pb-12 relative overflow-hidden">
+        <!-- Decorative Top Border -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 to-blue-600"></div>
+
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div class="absolute inset-0 opacity-[0.03]">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="footerPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M0,0 L40,40 M40,0 L0,40" stroke="white" stroke-width="1" fill="none" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#footerPattern)" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="relative h-10 w-10 overflow-hidden">
+                            <svg class="absolute inset-0" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#818cf8" />
+                                        <stop offset="100%" stop-color="#60a5fa" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="45" fill="url(#footerLogoGradient)" />
+                                <path d="M30,35 L70,35 L70,65 L30,65 Z" fill="none" stroke="white" stroke-width="4" />
+                                <path d="M40,30 L40,70" stroke="white" stroke-width="4" stroke-linecap="round" />
+                                <path d="M60,30 L60,70" stroke="white" stroke-width="4" stroke-linecap="round" />
+                                <path d="M30,50 L70,50" stroke="white" stroke-width="4" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-white">Folksio</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Folksio delivers cutting-edge automation solutions and custom applications for businesses
+                        looking to transform their operations and drive innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Homecare
+                                Automation</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Construction
+                                Safety</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Custom
+                                Applications</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Process
+                                Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About
+                                Us</a></li>
+                        <li><a href="#experience"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Our Experience</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">© 2025 Folksio. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy
+                            Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Terms
+                            of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Cookie
+                            Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Account for fixed header
+                        behaviour: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'95fb3558b2587fb3',t:'MTc1MjYwMjk0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
 </html>
