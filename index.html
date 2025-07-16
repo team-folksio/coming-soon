@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Folksio - Smart Automation & Custom Software Solutions</title>
+    <meta name="description"
+        content="Folksio delivers powerful SaaS products and custom software solutions for modern businesses. Get scalable, tailored cloud software today!" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -16,14 +18,18 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'bulk-slow': 'bulk-slow 4s ease-in-out infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
+                            '50%': { transform: 'translateY(10px)' },
+                        },
+                        'bulk-slow': {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.08)' },
+                        },
                     }
                 }
             }
@@ -54,8 +60,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
                     <a href="#" class="flex items-center space-x-2 group">
-                        <img src="/folksio.svg" alt="Folksio Logo"
-                            class="absolute inset-0 relative w-2/3 h-auto">
+                        <img src="/folksio.svg" alt="Folksio Logo" class="absolute inset-0 relative w-2/3 h-auto">
                     </a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
@@ -65,12 +70,15 @@
                         class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300">Experience</a>
                     <a href="#about"
                         class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300">About</a>
+                    <a href="#careers"
+                        class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300">Careers</a>
                     <a href="#contact"
                         class="px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:shadow-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                         Contact Us
                     </a>
                 </nav>
-                <button id="responsive-menu-button" class="md:hidden text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                <button id="mobile-menu-button"
+                    class="md:hidden text-gray-700 hover:text-indigo-600 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -80,12 +88,19 @@
             </div>
 
             <!-- Mobile menu, hidden by default -->
-            <div id="responsive-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-4 space-y-1 bg-white/90 backdrop-blur-md rounded-b-xl shadow-lg border border-gray-100">
-                    <a href="#services" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">Services</a>
-                    <a href="#experience" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">Experience</a>
-                    <a href="#about" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">About</a>
-                    <a href="#contact" class="block px-4 py-3 rounded-lg text-center bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300">
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div
+                    class="px-2 pt-2 pb-4 space-y-1 bg-white/90 backdrop-blur-md rounded-b-xl shadow-lg border border-gray-100">
+                    <a href="#services"
+                        class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">Services</a>
+                    <a href="#experience"
+                        class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">Experience</a>
+                    <a href="#about"
+                        class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">About</a>
+                    <a href="#careers"
+                        class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors duration-300">Careers</a>
+                    <a href="#contact"
+                        class="block px-4 py-3 rounded-lg text-center bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300">
                         Contact Us
                     </a>
                 </div>
@@ -119,17 +134,17 @@
             <!-- Abstract Shapes -->
             <div class="absolute top-20 left-10 opacity-20">
                 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="80" stroke="#4f46e5" stroke-width="2" />
+                    <circle cx="100" cy="100" r="80" stroke="#0d6efd" stroke-width="2" />
                     <circle cx="100" cy="100" r="40" stroke="#3b82f6" stroke-width="2" />
-                    <line x1="20" y1="100" x2="180" y2="100" stroke="#4f46e5" stroke-width="2" />
+                    <line x1="20" y1="100" x2="180" y2="100" stroke="#0d6efd" stroke-width="2" />
                     <line x1="100" y1="20" x2="100" y2="180" stroke="#3b82f6" stroke-width="2" />
                 </svg>
             </div>
             <div class="absolute bottom-20 right-10 opacity-20">
                 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="40" y="40" width="120" height="120" stroke="#4f46e5" stroke-width="2" />
+                    <rect x="40" y="40" width="120" height="120" stroke="#0d6efd" stroke-width="2" />
                     <rect x="70" y="70" width="60" height="60" stroke="#3b82f6" stroke-width="2" />
-                    <line x1="10" y1="10" x2="190" y2="190" stroke="#4f46e5" stroke-width="2" />
+                    <line x1="10" y1="10" x2="190" y2="190" stroke="#0d6efd" stroke-width="2" />
                     <line x1="190" y1="10" x2="10" y2="190" stroke="#3b82f6" stroke-width="2" />
                 </svg>
             </div>
@@ -164,49 +179,197 @@
                 </div>
                 <div class="relative">
                     <!-- Hero Illustration -->
-                    <div class="relative z-10 animate-float">
-                        <svg class="w-full h-auto" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                    <div class="relative z-10 animate-float hidden md:block">
+                        <svg class="w-full h-auto" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.8" />
-                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.9" />
+                                <linearGradient id="mainGradient" x1="0" y1="0" x2="600" y2="400"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0d6efd" />
+                                    <stop offset="1" stop-color="#3b82f6" />
                                 </linearGradient>
                                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="10" result="blur" />
-                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
                                 </filter>
                             </defs>
-
-                            <!-- Base Shape -->
-                            <rect width="600" height="400" rx="20" fill="url(#heroGradient)" />
-
-                            <!-- Abstract Tech Elements -->
-                            <circle cx="150" cy="150" r="80" fill="white" fill-opacity="0.1" />
-                            <circle cx="450" cy="250" r="120" fill="white" fill-opacity="0.1" />
-
-                            <!-- Connection Lines -->
-                            <path d="M100,100 L200,200 L300,150 L400,250 L500,200" stroke="white" stroke-width="4"
-                                stroke-opacity="0.3" fill="none" filter="url(#glow)" />
-
-                            <!-- Nodes -->
-                            <circle cx="100" cy="100" r="15" fill="white" filter="url(#glow)" />
-                            <circle cx="200" cy="200" r="15" fill="white" filter="url(#glow)" />
-                            <circle cx="300" cy="150" r="15" fill="white" filter="url(#glow)" />
-                            <circle cx="400" cy="250" r="15" fill="white" filter="url(#glow)" />
-                            <circle cx="500" cy="200" r="15" fill="white" filter="url(#glow)" />
-
-                            <!-- Digital Elements -->
-                            <rect x="150" y="300" width="150" height="80" rx="10" fill="white" fill-opacity="0.2" />
-                            <rect x="350" y="100" width="150" height="80" rx="10" fill="white" fill-opacity="0.2" />
-
-                            <!-- Binary code suggestion -->
-                            <text x="170" y="330" font-family="monospace" font-size="12" fill="white">01001010</text>
-                            <text x="170" y="350" font-family="monospace" font-size="12" fill="white">10110101</text>
-                            <text x="170" y="370" font-family="monospace" font-size="12" fill="white">01101001</text>
-
-                            <text x="370" y="130" font-family="monospace" font-size="12" fill="white">11001010</text>
-                            <text x="370" y="150" font-family="monospace" font-size="12" fill="white">00110101</text>
-                            <text x="370" y="170" font-family="monospace" font-size="12" fill="white">10101001</text>
+                            <rect width="600" height="400" fill="url(#mainGradient)" opacity="0.08" rx="32" ry="32" />
+                            <!-- Central Cloud (Hub) -->
+                            <g filter="url(#glow)" transform="translate(300,200) scale(0.06) translate(-1040,-1040)">
+                                <path fill="#6A6A6A" opacity="1.000000" stroke="none" d="M1563.705811,760.219482 
+	C1551.602173,766.558960 1541.962280,763.548767 1533.524902,754.521118 
+	C1523.072144,743.337280 1512.698364,732.074951 1502.049927,721.079590 
+	C1478.196533,696.449402 1450.520386,677.197998 1420.017944,661.537476 
+	C1401.242065,651.897522 1381.886719,643.917542 1361.809814,637.900635 
+	C1348.819946,634.007690 1335.196655,632.163574 1321.799561,629.717468 
+	C1313.022217,628.114807 1304.180542,626.546448 1295.299438,625.895325 
+	C1276.332153,624.504822 1255.322754,632.012268 1253.187622,656.876343 
+	C1252.622437,663.457275 1250.929565,669.933899 1249.974731,676.490417 
+	C1247.305664,694.818359 1235.345093,701.327759 1220.217773,704.009460 
+	C1213.694702,705.165833 1206.975952,705.683533 1200.344849,705.693054 
+	C1124.687256,705.801147 1049.029419,705.797180 973.372009,705.676392 
+	C966.741577,705.665833 960.029968,705.094788 953.500549,703.955688 
+	C939.551453,701.522278 929.599976,693.872375 925.894531,679.784729 
+	C923.699219,671.438538 922.086548,662.899719 920.817078,654.357666 
+	C918.365967,637.864380 910.120178,628.218079 893.612183,625.960144 
+	C882.152222,624.392700 870.416443,624.740295 858.798340,624.478638 
+	C853.818542,624.366455 848.824768,625.076477 843.837158,625.079468 
+	C771.843628,625.122681 699.849121,625.324402 627.857239,624.977844 
+	C606.249329,624.873840 584.595154,623.848633 563.061707,622.052307 
+	C544.895264,620.536926 534.820740,610.003662 532.316467,592.118225 
+	C531.303345,584.882324 530.484680,577.545593 530.477600,570.253906 
+	C530.404724,495.263275 530.427917,420.272095 530.713074,345.282196 
+	C530.741760,337.732697 532.408203,330.143646 533.765442,322.654663 
+	C536.471619,307.722137 547.083923,300.809113 560.746765,298.385895 
+	C570.852051,296.593658 581.243530,295.646515 591.508545,295.638489 
+	C788.490601,295.484558 985.472961,295.445709 1182.454956,295.632355 
+	C1205.752197,295.654449 1229.047852,297.138947 1252.344727,297.933746 
+	C1269.643677,298.523926 1287.014771,298.301117 1304.226074,299.855682 
+	C1331.814331,302.347534 1358.632935,308.832123 1384.696167,318.347931 
+	C1417.838501,330.448334 1448.290527,347.395416 1475.422974,369.898926 
+	C1495.398804,386.466888 1513.733765,404.655853 1529.396729,425.642944 
+	C1543.598389,444.671844 1556.785522,464.152222 1566.531128,485.815338 
+	C1581.354492,518.765686 1593.207397,552.706726 1595.717041,589.021606 
+	C1597.274048,611.549194 1598.243774,634.279968 1597.012207,656.784668 
+	C1596.076050,673.890747 1591.776245,690.901794 1587.975830,707.729919 
+	C1585.567749,718.393921 1581.531860,728.716675 1577.847412,739.057678 
+	C1575.025391,746.978088 1570.756592,754.124329 1563.705811,760.219482 
+z" />
+                                <path fill="#1CACFF" opacity="1.000000" stroke="none" d="
+M565.544922,1252.977783 
+	C546.807312,1247.688477 536.338013,1235.707520 533.873047,1217.459351 
+	C532.229797,1205.294434 531.406006,1192.927002 531.390198,1180.648682 
+	C531.260498,1079.664062 531.340698,978.678894 531.582031,877.694458 
+	C531.603394,868.759399 532.488281,859.680908 534.246887,850.924988 
+	C538.235107,831.067993 550.996399,819.554443 570.756226,816.210632 
+	C579.251587,814.773010 587.970093,814.083740 596.591064,814.050415 
+	C655.581543,813.822144 714.572937,813.823242 773.564087,813.820923 
+	C819.223816,813.819153 864.885742,813.691833 910.541443,814.149963 
+	C920.760254,814.252502 931.173950,815.668579 941.113037,818.071777 
+	C956.202820,821.720276 966.237366,831.788818 969.922119,846.948975 
+	C972.107300,855.939636 973.747437,865.325867 973.769897,874.538879 
+	C974.031006,981.855286 974.034180,1089.172852 973.765076,1196.489258 
+	C973.742004,1205.698730 971.966858,1215.065186 969.805054,1224.070312 
+	C966.540222,1237.671265 957.577637,1247.171997 944.383118,1251.343628 
+	C935.608826,1254.117920 926.166382,1255.804810 916.973877,1256.037476 
+	C889.660461,1256.728638 862.322632,1256.550537 834.994385,1256.548462 
+	C755.339600,1256.542480 675.684387,1256.566162 596.030579,1256.263306 
+	C586.119995,1256.225708 576.216736,1254.291504 565.544922,1252.977783 
+z" />
+                                <path fill="#1CACFF" opacity="1.000000" stroke="none" d="M1128.758179,876.772461 
+	C1160.496094,848.214844 1194.817383,825.945679 1236.930176,817.766968 
+	C1246.335815,815.940430 1255.521362,813.516602 1265.245728,813.499329 
+	C1272.134399,813.487061 1279.067993,811.207275 1285.899536,811.554565 
+	C1314.365723,813.001587 1342.229980,817.214050 1368.951660,828.255493 
+	C1391.607910,837.617004 1411.225708,851.113281 1430.182373,866.351135 
+	C1451.804932,883.731934 1467.682495,905.464600 1480.996338,929.211975 
+	C1491.546265,948.029297 1497.961548,968.645935 1502.715942,989.627441 
+	C1504.598511,997.935303 1504.540527,1006.678711 1505.437134,1015.216309 
+	C1505.849609,1019.143372 1506.476318,1023.047607 1506.925171,1026.971436 
+	C1507.225830,1029.599243 1507.799438,1032.285400 1507.536621,1034.873047 
+	C1506.170776,1048.323730 1505.835083,1062.050659 1502.729004,1075.107788 
+	C1499.167114,1090.081421 1495.712769,1105.167480 1488.902100,1119.400391 
+	C1482.877930,1131.989990 1477.324097,1144.743042 1469.046143,1156.006470 
+	C1457.503296,1171.712646 1445.910645,1187.171875 1430.294922,1199.582153 
+	C1414.907959,1211.810547 1399.292480,1223.410645 1381.655273,1231.995483 
+	C1363.460449,1240.851929 1344.452881,1247.541016 1324.229248,1250.056519 
+	C1316.379028,1251.033081 1308.460205,1251.447021 1300.584351,1252.234985 
+	C1296.992920,1252.594360 1293.433838,1253.269531 1289.852539,1253.742798 
+	C1287.898071,1254.000854 1285.907104,1254.417847 1283.967529,1254.278320 
+	C1275.749390,1253.687134 1267.528687,1253.057739 1259.337524,1252.177856 
+	C1241.192749,1250.228882 1223.768677,1245.419434 1206.563354,1239.374512 
+	C1185.593506,1232.006836 1167.402466,1219.811401 1149.700684,1207.014404 
+	C1127.683472,1191.097656 1110.961182,1170.141846 1096.661011,1147.149292 
+	C1083.388062,1125.808350 1075.053711,1102.544434 1069.427979,1078.254517 
+	C1067.652832,1070.590210 1067.231567,1062.611572 1066.204224,1054.774902 
+	C1065.563477,1049.886719 1064.923096,1044.998169 1064.335205,1040.103394 
+	C1064.137329,1038.455444 1063.855835,1036.761475 1064.030518,1035.133423 
+	C1065.328491,1023.026917 1066.346313,1010.871582 1068.219116,998.851013 
+	C1069.839111,988.452454 1071.738647,977.989380 1074.795166,967.944397 
+	C1082.072144,944.029907 1092.390869,921.520630 1108.370605,901.955505 
+	C1115.054443,893.772095 1121.632202,885.502136 1128.758179,876.772461 
+z" />
+                                <path fill="#0d6efd" opacity="1.000000" stroke="none" d="M911.955933,1721.940308 
+	C884.065918,1747.454224 854.501526,1768.890747 818.131531,1779.093872 
+	C800.957703,1783.911865 783.824341,1788.909424 765.632141,1787.774658 
+	C762.757751,1787.595215 759.810425,1788.630981 756.892944,1789.079590 
+	C754.949829,1789.378418 752.651978,1790.437500 751.111145,1789.771729 
+	C743.062195,1786.293945 734.630127,1788.585327 726.472900,1787.575195 
+	C718.337097,1786.567627 710.239258,1784.993286 702.246765,1783.140991 
+	C685.132385,1779.174561 668.377625,1773.965454 652.954468,1765.386597 
+	C637.324280,1756.692749 622.648804,1746.680054 608.605164,1735.411499 
+	C592.287292,1722.317871 579.764221,1706.310059 568.107605,1689.461060 
+	C551.907898,1666.045044 542.009766,1639.781738 536.101013,1612.086670 
+	C534.254272,1603.430542 534.386108,1594.356934 533.524292,1585.482910 
+	C533.271973,1582.884888 532.496216,1580.328979 532.346497,1577.731567 
+	C532.047546,1572.545166 531.786133,1567.335815 531.957642,1562.150757 
+	C532.064819,1558.909058 533.461609,1555.696045 533.472412,1552.467407 
+	C533.544250,1531.017700 538.373047,1510.437744 545.946167,1490.642090 
+	C552.205322,1474.280884 559.339233,1458.082886 570.201294,1444.085938 
+	C579.519348,1432.078735 588.229370,1419.162598 599.439636,1409.145386 
+	C629.340637,1382.426758 662.711609,1361.626831 702.989136,1353.413574 
+	C718.225098,1350.306763 733.497559,1347.656128 748.875427,1346.917847 
+	C768.708679,1345.965454 788.149963,1350.302124 807.497925,1354.609131 
+	C837.555054,1361.299927 863.648132,1376.106567 888.092529,1393.968018 
+	C903.908325,1405.524780 916.901306,1420.052734 928.883118,1435.687988 
+	C944.427917,1455.972534 955.549500,1478.274048 963.164734,1502.456787 
+	C968.333496,1518.870850 972.136536,1535.568970 971.916565,1552.963867 
+	C971.879639,1555.880859 972.738342,1558.805664 973.138550,1561.732910 
+	C973.495789,1564.345581 974.368042,1567.045166 974.024597,1569.572021 
+	C970.705688,1593.989136 969.809387,1618.748047 960.664795,1642.237061 
+	C950.843079,1667.465576 938.928650,1691.205200 920.305908,1711.186890 
+	C917.385986,1714.319580 915.054565,1718.000610 911.955933,1721.940308 
+z" />
+                            </g>
+                            <!-- Gear (Automation) -->
+                            <g>
+                                <circle cx="120" cy="100" r="30" fill="#ffffff" opacity="0.15" />
+                                <g transform="translate(120,100)">
+                                    <g>
+                                        <circle r="18" fill="url(#mainGradient)" />
+                                        <g stroke="#ffffff" stroke-width="2">
+                                            <circle r="10" fill="none" />
+                                            <g>
+                                                <line x1="0" y1="-18" x2="0" y2="-25" />
+                                                <line x1="0" y1="18" x2="0" y2="25" />
+                                                <line x1="-18" y1="0" x2="-25" y2="0" />
+                                                <line x1="18" y1="0" x2="25" y2="0" />
+                                                <line x1="13" y1="13" x2="18" y2="18" />
+                                                <line x1="-13" y1="13" x2="-18" y2="18" />
+                                                <line x1="13" y1="-13" x2="18" y2="-18" />
+                                                <line x1="-13" y1="-13" x2="-18" y2="-18" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <!-- Code Brackets (Software) -->
+                            <g>
+                                <rect x="470" y="80" width="60" height="60" rx="12" fill="#ffffff" opacity="0.15" />
+                                <g transform="translate(500,110)">
+                                    <path d="M-10,-15 L-20,0 L-10,15" stroke="url(#mainGradient)" stroke-width="4"
+                                        fill="none" />
+                                    <path d="M10,-15 L20,0 L10,15" stroke="url(#mainGradient)" stroke-width="4"
+                                        fill="none" />
+                                </g>
+                            </g>
+                            <!-- Chart/Dashboard (Analytics) -->
+                            <g>
+                                <rect x="120" y="300" width="60" height="40" rx="8" fill="#ffffff" opacity="0.15" />
+                                <g transform="translate(150,320)">
+                                    <rect x="-20" y="-10" width="40" height="20" rx="4" fill="url(#mainGradient)"
+                                        opacity="0.8" />
+                                    <rect x="-16" y="0" width="8" height="8" fill="#ffffff" opacity="0.8" />
+                                    <rect x="-4" y="-4" width="8" height="12" fill="#ffffff" opacity="0.8" />
+                                    <rect x="8" y="-8" width="8" height="16" fill="#ffffff" opacity="0.8" />
+                                </g>
+                            </g>
+                            <!-- Labels (optional, can remove for cleaner look) -->
+                            <text x="80" y="60" font-size="14" fill="#0d6efd" font-weight="bold">Automation</text>
+                            <text x="470" y="70" font-size="14" fill="#0d6efd" font-weight="bold">Software</text>
+                            <text x="120" y="360" font-size="14" fill="#0d6efd" font-weight="bold">Analytics</text>
                         </svg>
                     </div>
 
@@ -239,7 +402,7 @@
                 <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <pattern id="wavyPattern" x="0" y="0" width="100" height="20" patternUnits="userSpaceOnUse">
-                            <path d="M0,10 C30,15 70,5 100,10 L100,0 L0,0 Z" fill="#4f46e5" />
+                            <path d="M0,10 C30,15 70,5 100,10 L100,0 L0,0 Z" fill="#0d6efd" />
                         </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill="url(#wavyPattern)" />
@@ -445,7 +608,7 @@
                             </svg>
                         </div>
                         <div
-                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
                             2</div>
                         <div class="mt-3 text-gray-600 font-medium">Projects Delivered</div>
                     </div>
@@ -466,7 +629,7 @@
                             </svg>
                         </div>
                         <div
-                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
                             100%</div>
                         <div class="mt-3 text-gray-600 font-medium">Client Satisfaction</div>
                     </div>
@@ -487,7 +650,7 @@
                             </svg>
                         </div>
                         <div
-                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
                             2</div>
                         <div class="mt-3 text-gray-600 font-medium">Industries Served</div>
                     </div>
@@ -508,7 +671,7 @@
                             </svg>
                         </div>
                         <div
-                            class="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
                             5+</div>
                         <div class="mt-3 text-gray-600 font-medium">Years Experience</div>
                     </div>
@@ -619,6 +782,97 @@
                 <a href="#contact"
                     class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                     Work With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="relative py-24 md:py-32 bg-gradient-to-b from-blue-50 to-indigo-50 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div class="absolute top-0 left-0 w-1/2 h-1/2 bg-indigo-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-blue-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute inset-0 opacity-[0.02]">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="careersPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="1" fill="none" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#careersPattern)" />
+                </svg>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 mb-4">
+                    <span class="text-sm font-medium text-indigo-700">Join Our Team</span>
+                </div>
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+                    Careers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're always looking for talented, passionate people to join our mission. Explore open roles or send
+                    us your resume to be considered for future opportunities.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <!-- Example Job Card -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white rounded-3xl shadow-xl p-8 border border-gray-100 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Full Stack Developer</h3>
+                        <p class="text-gray-600 mb-4">Work on innovative automation and SaaS projects using modern
+                            technologies. 2+ years experience preferred.</p>
+                        <span
+                            class="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-medium mb-4">Remote
+                            / Kochi</span>
+                        <a href="mailto:admin@folksio.com?subject=Application%20for%20Full%20Stack%20Developer"
+                            class="inline-flex items-center font-medium text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300">
+                            <span>Apply Now</span>
+                            <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- General Application Card -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-blue-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white rounded-3xl shadow-xl p-8 border border-gray-100 h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Open Application</h3>
+                            <p class="text-gray-600 mb-4">Don't see a role that fits? We're always interested in meeting
+                                talented people. Send us your resume and tell us how you can make a difference at
+                                Folksio.</p>
+                        </div>
+                        <a href="mailto:admin@folksio.com?subject=Open%20Application"
+                            class="inline-flex items-center font-medium text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300 mt-4">
+                            <span>Send Resume</span>
+                            <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="mailto:admin@folksio.com?subject=Careers%20at%20Folksio"
+                    class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                    Join Our Team
                 </a>
             </div>
         </div>
@@ -835,7 +1089,7 @@
                         </li>
                         <li><a href="#contact"
                                 class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
-                        <li><a href="#"
+                        <li><a href="#careers"
                                 class="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
                     </ul>
                 </div>
@@ -864,7 +1118,7 @@
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-        
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
@@ -875,9 +1129,9 @@
                 });
             });
 
-            document.getElementById('responsive-menu-button').addEventListener('click', function() {
-                const mobileMenu = document.getElementById('responsive-menu');
-                
+            document.getElementById('mobile-menu-button').addEventListener('click', function () {
+                const mobileMenu = document.getElementById('mobile-menu');
+
                 if (mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.remove('hidden');
                     mobileMenu.classList.add('block');
